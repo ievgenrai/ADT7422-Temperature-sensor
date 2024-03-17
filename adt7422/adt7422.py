@@ -140,7 +140,7 @@ class ADT7422:
         self.bus.write_byte(self.device, 0x00)
         resolution = self.bus.read_byte_data(self.device, CONFIGURATION)
         self.bus.write_byte(self.device, 0x00)
-        temperature_msb = self.device.read_byte_data(self.device, TEMPERATURE_VALUE_MSB)
+        temperature_msb = self.bus.read_byte_data(self.device, TEMPERATURE_VALUE_MSB)
         self.bus.write_byte(self.device, 0x00)
         temperature_lsb = self.bus.read_byte_data(self.device, TEMPERATURE_VALUE_LSB)
         temperature = (temperature_msb << 8) | temperature_lsb
