@@ -83,7 +83,7 @@ class ADT7422:
         SMBus(self.smbus).close()
         return "SMBus closed"
         
-    def read_register(self, address):
+    def get_register(self, address):
         """
         This method used to read register with the specified address
         """
@@ -91,7 +91,7 @@ class ADT7422:
         self.bus.write_byte(self.device, 0x00)
         return self.bus.read_byte_data(self.device, address)
         
-    def write_register(self, address, data):
+    def set_register(self, address, data):
         """
         This method used to write data into register with the specified address
         """
