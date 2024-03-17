@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='adt7422',
-    version='1.0.2',
+    version='1.0.3',
     packages=['adt7422'],
     url="https://github.com/ievgenrai/ADT7422-Temperature-sensor",
     license='MIT',
